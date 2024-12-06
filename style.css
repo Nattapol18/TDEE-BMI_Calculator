@@ -1,0 +1,62 @@
+body, select, button {
+    font-family: 'Arial', sans-serif; /* ใช้ฟอนต์ที่ดูทันสมัย */
+    font-size: 16px;
+    color: #000000; /* ข้อความสีขาว */
+}
+
+button {
+    margin-bottom: 10px;
+    background-color: #FF6F00; /* สีส้ม */
+    color: #FFFFFF; /* ข้อความสีขาว */
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background-color: #212121; /* สีดำ */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+#inputsContainer, #resultsContainer, #infoContainer {
+    background-color: #333333; /* สีเทาดำ */
+    color: #FF6F00; /* สีส้ม */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5); /* เพิ่มเงาให้ดูมีมิติ */
+    border-radius: 5px;
+    padding: 20px;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    max-width: 480px;
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #FF6F00; /* สีส้ม */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+#resultsContainer, #infoContainer {
+    text-align: center;
+    line-height: 150%;
+    padding: 5px 0px 5px 0px;
+    visibility: collapse;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 10px;
+    color: #FFFFFF; /* ข้อความ label เป็นสีขาว */
+}
