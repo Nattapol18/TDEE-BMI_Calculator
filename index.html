@@ -1,83 +1,80 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TDEE & BMI Calculator</title>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Science TDEE Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="inputsContainer" class="calculator-card">
+            <h1>Sports Science TDEE Calculator</h1>
+            <form id="tdeeForm" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </div>
 
-    <body>
-        <div id="inputsContainer">
-            <table>
-                <tr style="text-align: center;">
-                    <td>
-                        <h1>TDEE Calculator</h1>
-                    </td>
-                </tr>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" min="0" max="999" required>
+                </div>
 
-                <tr>
-                    <td>
-                        <label for="gender">Gender: </label>
-                        <select id="gender" required>
-                            <option value="">Select Gender</option>
-                            <option value="M">Male</option>
-                            <option value="F">Female</option>
-                        </select>
-            
-                        <br/>
-                        <label for="age">Age: </label>
-                        <input type="number" id="age" min="0" max="999" required>
-            
-                        <br/>
-                        <label for="weight">Weight: </label>
+                <div class="form-group">
+                    <label for="weight">Weight:</label>
+                    <div class="input-unit-group">
                         <input type="number" id="weight" min="0" max="999" required>
                         <select id="weightUnit" required>
-                            <option value="">Select Unit</option>
                             <option value="KG">kg</option>
                             <option value="LBS">lbs</option>
                         </select>
-            
-                        <br/>
-                        <label for="height">Height: </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="height">Height:</label>
+                    <div class="input-unit-group">
                         <input type="number" id="height" min="0" max="999" required>
                         <select id="heightUnit" required>
-                            <option value="">Select Unit</option>
                             <option value="CM">cm</option>
                             <option value="IN">in</option>
                         </select>
-            
-                        <br/>
-                        <label for="activityLevel">Activity Level: </label>
-                        <select id="activityLevel" required>
-                            <option value="">Select Activity Level</option>
-                            <option value="1.2">Sedentary (Office Job)</option>
-                            <option value="1.375">Light Exercise (1-2 days/week)</option>
-                            <option value="1.55">Medium Exercise (3-5 days/week)</option>
-                            <option value="1.725">Heavy Exercise (6-7 days/week)</option>
-                            <option value="1.9">Athlete (2x per day)</option>
-                        </select>
-            
-                        <br/>
-                        <label for="bf">Body Fat % (Optional): </label>
-                        <input type="number" id="bodyFatPercent"  min="0" max="100">%
-                    </td>
-                </tr>
+                    </div>
+                </div>
 
-                <tr style="text-align:center">
-                    <td>
-                        <div id="submitBtnBox">
-                            <br/>
-                            <button type="button" id="submitBtn">Calculate TDEE</button>
-                        </div>
-                    </td>
-                </tr>
-            </table>
+                <div class="form-group">
+                    <label for="activityLevel">Activity Level:</label>
+                    <select id="activityLevel" required>
+                        <option value="">Select Activity Level</option>
+                        <option value="1.2">Sedentary (Office Job)</option>
+                        <option value="1.375">Light Exercise (1-2 days/week)</option>
+                        <option value="1.55">Medium Exercise (3-5 days/week)</option>
+                        <option value="1.725">Heavy Exercise (6-7 days/week)</option>
+                        <option value="1.9">Athlete (2x per day)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="bodyFatPercent">Body Fat % (Optional):</label>
+                    <div class="input-unit-group">
+                        <input type="number" id="bodyFatPercent" min="0" max="100">
+                        <span class="unit">%</span>
+                    </div>
+                </div>
+
+                <button type="button" id="submitBtn">Calculate TDEE</button>
+            </form>
         </div>
 
-        <div id="infoContainer"></div>
-
-        <div id="resultsContainer"></div>
-
-        <script src="script.js"></script>
-    </body>
+        <div id="infoContainer" class="result-card"></div>
+        <div id="resultsContainer" class="result-card"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
